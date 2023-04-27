@@ -1,0 +1,216 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    //created by kelompok 2 TPB 52 IF
+   //Marchel ferry Timoteus S (121140195) , farhan rizky gunawan (121140200), solafide zamili (121140201)
+
+    string a;
+    int  pilih,z,n,i,k,x;
+    float peluangnya,o=0, j=0,m=0,l=0,jj,mm,g;
+    char yes , agree , pilih2 ;
+    
+    cout<<"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"<<endl;
+    cout<<"||              Selamat datang di program peluang kami, silahkan tekan enter untuk melanjutkan                   ||"<<endl;
+    cout<<"|| ini adalah program untuk menghitung peluang terambilnya huruf vokal dan konsonan dari berapa kali pengambilan ||"<<endl;
+    cout<<"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"<<endl<<endl;
+    cout<<"enter...";
+    do {
+
+
+    cin.ignore(1,'\n');
+    cout<<endl<<"Silahkan inputkan kata kata apapun yang anda mau ( misal abcd )"<<endl;
+    cout <<"Input : ";
+    getline(cin,a); //inputtan menggunakan getline, agar karakter "spasi" dapat dibaca pada c++
+    cout<<"Output : "<<endl;
+    
+     cout<<"jumlah total huruf : ";
+     int jum = a.length(), jumx  , jumy ;
+    for ( z=0;z<a.length();z++) //looping menghitung jumlah huruf pada kalimat inputan
+        {
+            if (a[z]==' ' ){
+                jum = jum -1;
+            }
+           
+        }
+        cout<<jum;
+        cout<<endl;
+    cout<<"Vokal : ";
+    
+        
+            for (g=0;g<=jum+1;g++) //looping cek total huruf vokal
+                {
+                    if (a[g]=='a'||a[g]=='i'||a[g]=='u'||a[g]=='e'||a[g]=='o'||a[g]=='A'||a[g]=='I'||a[g]=='U'||a[g]=='E'||a[g]=='O')
+                        {
+                            j++;
+                        }
+                }
+
+    if (j>0) //jika paling tidak ada 1
+        {
+           cout<<j<<" = ";
+
+            for (g=0;g<=jum+1;g++)
+                {
+                   if (a[g]=='a'||a[g]=='i'||a[g]=='u'||a[g]=='e'||a[g]=='o'||a[g]=='A'||a[g]=='I'||a[g]=='U'||a[g]=='E'||a[g]=='O')
+                        {
+                            cout<<a[g]<<" ";
+                        }else if ( a[g] == ' '){
+                        	
+						}
+                }
+        }
+    else //jika tak ada sama sekali
+        {
+            cout<<"Tak ada...";
+        }
+cout<<endl;
+cout<<"Konsonan : ";
+            for (g=0;g<=jum+2;g++) //looping menghitung jumlah huruf konsonan
+                {
+                    if (a[g]=='b'||a[g]=='c'||a[g]=='d'||a[g]=='f'||a[g]=='g'||a[g]=='h'||
+                        a[g]=='j'||a[g]=='k'||a[g]=='l'||a[g]=='m'||a[g]=='n'||a[g]=='p'||
+                        a[g]=='q'||a[g]=='r'||a[g]=='s'||a[g]=='t'||a[g]=='v'||a[g]=='w'||
+                        a[g]=='x'||a[g]=='y'||a[g]=='z'||a[g]=='B'||a[g]=='C'||a[g]=='D'||
+                        a[g]=='F'||a[g]=='G'||a[g]=='H'||a[g]=='J'||a[g]=='K'||a[g]=='L'||
+                        a[g]=='M'||a[g]=='N'||a[g]=='P'||a[g]=='Q'||a[g]=='R'||a[g]=='S'||
+                        a[g]=='T'||a[g]=='V'||a[g]=='W'||a[g]=='X'||a[g]=='Y'||a[g]=='Z')
+                        {
+                            m++;
+                        }
+                }
+
+if (m>0) //jika paling tidak ada 1
+    {
+        cout<<m<<" = ";
+
+            for (g=0;g<=jum+2;g++)
+                {
+                    if (a[g]=='b'||a[g]=='c'||a[g]=='d'||a[g]=='f'||a[g]=='g'||a[g]=='h'||
+                        a[g]=='j'||a[g]=='k'||a[g]=='l'||a[g]=='m'||a[g]=='n'||a[g]=='p'||
+                        a[g]=='q'||a[g]=='r'||a[g]=='s'||a[g]=='t'||a[g]=='v'||a[g]=='w'||
+                        a[g]=='x'||a[g]=='y'||a[g]=='z'||a[g]=='B'||a[g]=='C'||a[g]=='D'||
+                        a[g]=='F'||a[g]=='G'||a[g]=='H'||a[g]=='J'||a[g]=='K'||a[g]=='L'||
+                        a[g]=='M'||a[g]=='N'||a[g]=='P'||a[g]=='Q'||a[g]=='R'||a[g]=='S'||
+                        a[g]=='T'||a[g]=='V'||a[g]=='W'||a[g]=='X'||a[g]=='Y'||a[g]=='Z')
+                        {
+                            cout<<a[g]<<" ";
+                        }else if ( a[g] == ' '){
+                        	
+						}
+                }
+
+    }
+else //jika tak ada sama sekali
+    {
+        cout<<"Tak ada...";
+    }
+    cout<<endl;
+    cout<<"apakah anda ingin menghitung peluangnya ?(y/n) ";
+    cin>>agree;
+    int d =0;
+    while ( agree == 'y' && d <1){
+    cout<<endl;
+    cout<<"pilih jenis peluang"<<endl;
+    cout<<"1.hitung peluang huruf vokal"<<endl;
+    cout<<"2.hitung peluang huruf konsonan"<<endl;
+    cout<<"--> ";
+    cin>>pilih;
+    switch (pilih){
+        case 1:
+        cout<<"Berapa kali pengambilan yang anda inginkan ? ";
+        cin>>n;
+        cout<<endl;
+        jumy = jum; //jumlah seluruh kata utk h vokal
+        jj = j;
+        if ( n <= jumy ){
+        for (i = 1; i <= n ; i++)
+        {
+        if( i != 1){//kondisi cabang utk ke -n kali pengambilan
+          jumy = jum;
+          jumy = jumy - i + 1; 
+        }else{
+          peluangnya =jj/jumy;
+        }
+        peluangnya =jj/jumy;
+        if ( peluangnya >=  0 && peluangnya <= 1){
+        cout<<"pengambilan ke-"<<i<<" peluang terambilnya huruf vokal adalah "<<setprecision(2)<<peluangnya<<endl;
+        }else {
+          cout<<"nilai peluang lebih dari 1 atau kurang dari 0";
+        }
+        jj = jj - 1;
+
+        }
+        }else {
+            cout<<"maaf, pengambilan melewati batas! "<<endl;
+        }
+        break;
+        case 2:
+          
+        cout<<"Berapa kali pengambilan yang anda inginkan ? ";
+        cin>>x;
+        cout<<endl;
+        jumx = jum;
+        mm = m;
+        if ( x <= jumx ){
+            
+        for (k = 1; k <= x ; k++)
+          {
+            
+          if( k != 1){//kondisi cabang utk ke -n kali pengambilan
+          jumx = jum;
+          jumx = jumx - k + 1; 
+        }else{
+          peluangnya =mm/jumx;
+        }
+          
+        peluangnya =mm/jumx;
+        if ( peluangnya >=  0 && peluangnya <= 1){
+        cout<<"pengambilan ke-"<<k<<" peluang terambilnya huruf konsonan adalah "<<setprecision(2)<<peluangnya<<endl;
+        }else {
+          cout<<"nilai peluang lebih dari 1 atau kurang dari 0";
+        }
+        mm = mm - 1;
+        }
+        }else {
+            cout<<"maaf, pengambilan melewati batas!"<<endl;
+        }
+        break;
+        default:
+        cout<<"pilihan anda tidak ada ";
+         break;
+    }
+    cout<<endl;
+    cout<<"Apakah anda ingin menghitung peluang lainnya ?(y/n) ";
+    cin>>pilih2;
+    
+    if ( pilih2 == 'y'){
+    	agree == 'y';
+    	d = 0;
+	}else {
+		d++;
+	}
+    
+    }
+    
+cout<<endl;
+cout<<"apakah anda ingin mengulang program ?(y/n) ";
+cin>>yes;
+cout<<endl;
+ jum = 0;
+ j = 0;
+ m = 0;
+ if ( yes == 'y'){
+    cout<<"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"<<endl;    
+}
+}while ( yes == 'y');
+cout<<endl;
+
+    cout<<"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"<<endl;
+    cout<<"||                 terimakasih telah menggunakan program kami, sampai jumpa lagi !!!                             ||"<<endl;
+    cout<<"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"<<endl<<endl;
+
+    return 0;
+}
