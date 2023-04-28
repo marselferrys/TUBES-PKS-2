@@ -34,6 +34,6 @@ Program ini akan menghitung peluang terambilnya huruf vokal dan konsonan dari n 
 | File |      link     |
 | ------ | ------ |
 | Laporan | tempel link disini |
-| Github Program | https://github.com/marselferrys/TUBES-PKS-2 |
+| Program | https://github.com/marselferrys/TUBES-PKS-2 |
 | Program running | https://replit.com/@Marchel-Samosir/Tugas-Besar-PKS-2 |
 | Video | tempel link disini |
