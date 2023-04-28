@@ -1,4 +1,4 @@
-# Program Menghitung Peluang Terambinya Huruf Vokal Dan Konsonan Dari N Kali Pengambilan
+# Program Menghitung Peluang Terambilnya Huruf Vokal Dan Konsonan Dari N Kali Pengambilan
 Program ini akan menghitung peluang terambilnya huruf vokal dan konsonan dari n kali pengambilan huruf dari sebuah kata atau kalimat.
 
 ## Anggota kelompok 
